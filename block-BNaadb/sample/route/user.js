@@ -46,7 +46,7 @@ router.post("/:id", (req, res, next) => {
     res.redirect(`/users/${id}`);
   });
 });
-
+//delete user -- have to use 'get'
 router.get("/:id/delete", (req, res, next) => {
   let id = req.params.id;
   User.findByIdAndDelete(id, (err, book) => {
